@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() {
     private fun initRecyclerView() {
         // Header List
         val homeHeaderList = listOf(
-            HomeItem(R.drawable.baseline_8k_plus_24, "Header 1", "desc 1"),
+            HomeItem(R.drawable.baseline_8k_plus_24, "Header 13", "desc 1"),
             HomeItem(R.drawable.ic_launcher_foreground, "Header 2", "desc 2"),
             HomeItem(R.drawable.baseline_access_time_filled_24, "Header 3", "desc 3")
         )
@@ -64,6 +64,8 @@ class MainActivity : AppCompatActivity() {
         binding.rvBodyRecycler.layoutManager = LinearLayoutManager(this)
         binding.rvBodyRecycler.adapter = homeAdapter
     }
+
+
 
     private fun fetchProducts() {
         ApiClient.apiService.getProducts().enqueue(object : Callback<List<Product>> {
